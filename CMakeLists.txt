@@ -11,5 +11,5 @@ file (GLOB SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
 
 add_library(fbConfigManager ${SOURCES})
 
-append_firebreath_link_library(${PROJECT_NAME})
+append_firebreath_link_library(fbConfigManager)
 append_firebreath_include_dir(${CMAKE_CURRENT_SOURCE_DIR})

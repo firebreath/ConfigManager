@@ -9,6 +9,7 @@ class ConfigManager
 {
 public:
     static void setPath(const std::string& path);
+    static void setDefaultConfig(const FB::VariantMap& defMap);
 
     template<typename T>
     T getValue(const std::string& key) {
@@ -25,6 +26,7 @@ protected:
     ConfigManager() {}
     virtual ~ConfigManager() {}
     
+    void initConfigFile();
     virtual void saveConfigMap(const std::string& filePath, const FB::VariantMap& map) = 0;
     virtual FB::VariantMap loadConfigMap(const std::string& filePath) = 0;
     
